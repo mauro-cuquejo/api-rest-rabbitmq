@@ -6,7 +6,7 @@ para correr localmente:
 npm start
 
 para crear imagen:
-docker build --no-cache -t api-rest-rabbitmq .
+docker build --no-cache -t api-rest-rabbitmq-publisher .
 
 para correr via container:
-docker run -d -p 5001:4000 api-rest-rabbitmq
+docker run -d -p 5002:4002 api-rest-rabbitmq-publisher
