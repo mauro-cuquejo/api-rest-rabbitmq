@@ -3,10 +3,18 @@ const https = require('https')
 
 module.exports = {
     async obtenerDatosDummy() {
+        let url = (process.env.NODE_ENV === 'production') ?
+            process.env.URL_DATOS_DUMMY :
+            'localhost';
+
+        let port = (process.env.NODE_ENV === 'production') ?
+            5000 :
+            3000;
+
         let options = {
-            host: 'localhost',//'172.17.0.1',
-            port: 5000,
-            path: '/'
+            host: url,
+            port: port,
+            path: '/obtener-dummy-original'
         };
         return new Promise((resolve, reject) => {
             http.get(options, (response) => {

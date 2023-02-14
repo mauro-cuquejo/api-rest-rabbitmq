@@ -9,4 +9,4 @@ para crear imagen:
 docker build --no-cache -t api-rest-rabbitmq-publisher .
 
 para correr via container:
-docker run -d -p 5002:4002 api-rest-rabbitmq-publisher
+docker run -d -p 5005:4005 api-rest-rabbitmq-publisher
